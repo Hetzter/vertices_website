@@ -213,16 +213,6 @@ h5 {
     backface-visibility: hidden;
 }
 
-.box-header.is-fixed {
-    position: fixed;
-    top: -80px;
-    background-color: rgba(255, 255, 255, 0.96);
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
 .box-header.is-visible {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
