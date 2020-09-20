@@ -725,16 +725,12 @@ b i:last-child {
 }
 
 .portfolio_item {
-    border-radius: 2px;
     position: relative;
-    transform: scale(98%);
     overflow: hidden;
     display: block;
 }
 
 .portfolio_item:hover {
-    -webkit-transform: scale(102%);
-    transform: scale(102%);
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
@@ -745,7 +741,7 @@ b i:last-child {
     left: 0px;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(255, 255, 255, .03);
     opacity: 0;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -834,7 +830,7 @@ b i:last-child {
 footer {
     padding: 30px 0;
     text-align: center;
-    background: #f5f5f5
+    background: #101010;
 }
 
 .copyright {
@@ -861,7 +857,7 @@ footer img {
     right: 10px;
     text-align: center;
     color: #fff;
-    background: rgba(255, 191, 0, 0.8);
+    background: #D04174;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
@@ -981,7 +977,7 @@ footer img {
 .textarea-contact {
     height: 200px;
     width: 100%;
-    border: solid 1px rgba(0, 0, 0, .1);
+    border: solid 1px #333;
     position: relative;
 }
 
@@ -1015,7 +1011,7 @@ footer img {
 .input-contact {
     height: 40px;
     width: 100%;
-    border: solid 1px rgba(0, 0, 0, .1);
+    border: solid 1px #333;
     position: relative;
     margin-bottom: 30px;
 }
@@ -1084,7 +1080,7 @@ textarea:focus {
 }
 
 .btn-box {
-    background: #D04174;
+    background: rgba(201, 65, 116, 0.8);
     padding: 10px 50px;
     border-radius: 0;
     color: #fff;
@@ -1096,7 +1092,7 @@ textarea:focus {
 
 .btn-box:hover,
 .btn-box:focus {
-    background: #F5B700;
+    background: #D04174;
     color: #fff;
 }
 
