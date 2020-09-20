@@ -37,7 +37,8 @@ body {
     height: 100%;
     font-family: 'Poppins', sans-serif;
     line-height: 1.8;
-    color: #999
+    color: #999;
+    background-color: #171717;
 }
 
 .no-padding {
@@ -724,9 +725,18 @@ b i:last-child {
 }
 
 .portfolio_item {
+    border-radius: 2px;
     position: relative;
+    transform: scale(98%);
     overflow: hidden;
     display: block;
+}
+
+.portfolio_item:hover {
+    -webkit-transform: scale(102%);
+    transform: scale(102%);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .portfolio_item .portfolio_item_hover {
