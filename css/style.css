@@ -81,6 +81,14 @@ a {
     font-size: 11px;
 }
 
+.spacer-top {
+    margin-top: 80px;
+}
+
+.spacer-bottom {
+    margin-bottom: 40px;
+}
+
 
 /* typography
 ==================================================*/
@@ -1061,10 +1069,6 @@ footer img {
 input:focus,
 textarea:focus {
     outline: none;
-}
-
-.contact-info {
-    margin-top: 20px;
 }
 
 .contact-info i {
