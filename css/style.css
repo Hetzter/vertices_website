@@ -42,13 +42,8 @@ body {
 }
 
 .no-padding {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.no-padding [class^="col-"] {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .main-container {
@@ -100,7 +95,7 @@ h1 {
 }
 
 h3 {
-    color: #393939;
+    color: #f0f0f0;
 }
 
 h5 {
@@ -113,6 +108,7 @@ p {
 
 h2.text-uppercase {
     font-size: 48px;
+    color: #f0f0f0
 }
 
 
@@ -452,8 +448,8 @@ h2.text-uppercase {
     text-transform: uppercase
 }
 
-b i:last-child {
-    color: #ffffff !important;
+b i:first-child {
+    color: #D04174 !important;
 }
 
 .box-intro h5 {
