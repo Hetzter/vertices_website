@@ -1,0 +1,144 @@
+html(lang = "en")
+    head
+        meta(charset = "utf8", http-equiv = "X-UA-Compatible", name="viewport", content="width=device-width, initial-scale=1")
+        title Verts
+        link(rel = "icon", href = "/img/fav.png", type = "image/x-icon")
+        link(href = "/css/bootstrap.min.css", rel="stylesheet")
+        link(href = "/ionicons/css/ionicons.min.css", rel="stylesheet")
+        link(href = "/css/style.css", rel="stylesheet")
+        script(src = "/js/modernizr.js")
+
+    body
+        div#preloader
+            div.pre-container
+                div.spinner
+                    img(src = "/img/preloader_animation.gif", id = "preloader_animation")
+
+        header
+            div.box-logo
+                a(href = "/")
+                    img(src = "/img/LogoVertices.png", width="50" alt="Logo")
+
+        div.container
+            div.row
+                div.col-md-8
+                    div.container
+                    div.col
+                        h2.text-uppercase Admin Page
+                        h3.text-uppercase Create new Project
+                    div.container-fluid
+                        form#projectForm(action = "/admin/project/create", method = "post")
+                            div.row
+                                div.col-md-6
+                                    div.form-group
+                                        lable(for = "projectName") Project Name
+                                        input.form-control(type = "text", id = "projectName", name = "projectName", placeholder = "Project Name")
+                                div.col-md-6
+                                    div.form-group
+                                        lable(for = "projectSubtitle") Project Subtitle
+                                        input.form-control(type = "text", id = "projectSubtitle", name = "projectSubtitle", placeholder = "Project Subtitle")
+                            div.row
+                                div.col-md-6
+                                    div.form-group
+                                        lable(for = "projectImage") Image Location
+                                        input.form-control(type = "text", id = "projectImage", name = "projectImage", placeholder = "/img/image.jpg")
+                                div.col-md-6
+                                    div.form-group
+                                        lable(for = "projectMediaLink") Project Media Link
+                                        input.form-control(type = "text", id = "projectMediaLink", name = "projectMediaLink", placeholder = "https://youtube.com/embed/ABCD")
+                            div.form-group
+                                lable(for = "projectText") Project Text
+                                textarea.form-control(type = "text", id = "projectText", form = "projectForm" name = "projectText", placeholder = "lorem impsum dolor...")
+                            div.row
+                                div.col-md-6
+                                    div.form-group
+                                        lable(for = "projectLocation") Project Link
+                                        input.form-control(type = "text", id = "projectLocation", name = "projectLocation", placeholder = "ProjectLink")
+                                div.col-md-6
+                                    div.form-group
+                                        input.btn.btn-primary(type = "submit", value = "Create new Project")
+
+                div.col-md-4
+                    div.row
+                        div.col-md-8
+                            h2.text-uppercase Logout
+                        div.col-md-4
+                            form(action = "/admin/logout", method = "post")
+                                div.form-group.text-center
+                                    input.btn.btn-primary(type = "submit", value = "Logout")
+
+                    h3.text-uppercase Create new User
+                    
+                    form(action = "/admin/register", method = "post")
+                        div.form-group
+                            lable(for = "uname") Username
+                            input.form-control(type = "text", id = "uname", name = "uname", placeholder = "Username")
+                        div.form-group
+                            lable(for = "passwd") Password
+                            input.form-control(type = "password", id = "passwd", name = "passwd", placeholder = "Password")
+                        div.form-group
+                            input.btn.btn-primary(type = "submit", value = "Create new User")
+                    
+            div.row
+                // user management
+                div.col-md-7.adminPanelContainer
+                    h3.text-uppercase Manage Projects
+                    div.adminPanelList
+                        for project in projects
+                            div.container-fluid
+                                div.row.adminPanelListElement
+                                    div.col-md-2
+                                        img.adminPanelListItem.img-responsive(src=project.projectImage, alt="image")
+                                    div.col-md-8
+                                        p.adminPanelListItem=project.projectName
+                                    div.col-md-2
+                                        form.adminPanelListItem(action = "/admin/project/delete/" + project.projectLocation, method = "post")
+                                            input.btn.btn-danger(type = "submit", value = "Delete")
+
+                div.col-sm-1
+
+                // project management
+                div.col-md-4.adminPanelContainer
+                    h3.text-uppercase Manage Users
+                    div.adminPanelList
+                        for user in users
+                            div.container-fluid
+                                div.row.adminPanelListElement
+                                    div.col-md-8
+                                        p.adminPanelListItem=user.uname
+                                    div.col-md-4
+                                        form.adminPanelListItem.adminPanelListItem(action = "/admin/user/delete/" + user.uname, method = "post")
+                                            input.btn.btn-danger(type = "submit", value = "Delete")
+
+            div.row
+                div.col-md-8
+                div.col-md-4
+                    if status == "userAdd"
+                        p.success=msg
+                    else if status == "userExists"
+                        p.error=msg
+                    else if status == "deleteUser"
+                        p.success=msg
+                    else if status == "credentialsError"
+                        p.error=msg
+                    else if status == "projectDataError"
+                        p.error=msg
+                    else if status == "projectAdd"
+                        p.success=msg
+                    else if status == "projectExists"
+                        p.error=msg
+                    else if status == "deleteProject"
+                        p.success=msg
+                    else if status == "hashError"
+                        p.error=msg
+
+
+        script(src = "/js/jquery-2.1.1.js")
+        script(src = "/js/bootstrap.min.js")
+        script(src = "/js/custom.js")
+
+        footer
+            div.container
+                p.copyright © Verts Portfolio 2020
+                a(href = "/impressum.html")
+                    p Impressum

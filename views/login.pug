@@ -1,0 +1,55 @@
+html(lang = "en")
+    head
+        meta(charset = "utf8", http-equiv = "X-UA-Compatible", name="viewport", content="width=device-width, initial-scale=1")
+        title Verts
+        link(rel = "icon", href = "/img/fav.png", type = "image/x-icon")
+        link(href = "/css/bootstrap.min.css", rel="stylesheet")
+        link(href = "/ionicons/css/ionicons.min.css", rel="stylesheet")
+        link(href = "/css/style.css", rel="stylesheet")
+        script(src = "/js/modernizr.js")
+
+    body
+        div#preloader
+            div.pre-container
+                div.spinner
+                    img(src = "/img/preloader_animation.gif", id = "preloader_animation")
+
+        header
+            div.box-logo
+                a(href = "/")
+                    img(src = "/img/LogoVertices.png", width="50" alt="Logo")
+
+        div.container
+            div.row
+                div.col-md-12
+                    div.container.spacer-top
+                    div.col
+                        h2.text-uppercase Login
+                        div.h-10
+                        h5.spacer-bottom Please log in
+
+
+            div.row
+                div.col-md-5
+                    form(action = "/login", method = "post")
+                        div.form-group
+                            lable(for = "uname") Username
+                            input.form-control(type = "text", id = "uname", name = "uname", placeholder = "Username")
+                        div.form-group
+                            lable(for = "passwd") Password
+                            input.form-control(type = "password", id = "passwd", name = "passwd", placeholder = "Password")
+                        div.form-group
+                            input.btn.btn-primary.spacer-bottom(type = "submit", value = "Submit")
+            div.row.error
+                if error
+                    p.spacer-bottom=error
+
+        script(src = "/js/jquery-2.1.1.js")
+        script(src = "/js/bootstrap.min.js")
+        script(src = "/js/custom.js")
+
+        footer
+            div.container
+                p.copyright © Verts Portfolio 2020
+                a(href = "/impressum.html")
+                    p Impressum

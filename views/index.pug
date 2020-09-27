@@ -1,0 +1,67 @@
+html(lang = "en")
+    head
+        meta(charset = "utf8", http-equiv = "X-UA-Compatible", name="viewport", content="width=device-width, initial-scale=1")
+        title Verts
+        link(rel = "icon", href = "/img/fav.png", type = "image/x-icon")
+        link(href = "/css/bootstrap.min.css", rel="stylesheet")
+        link(href = "/ionicons/css/ionicons.min.css", rel="stylesheet")
+        link(href = "/css/style.css", rel="stylesheet")
+        script(src = "/js/modernizr.js")
+
+    body
+        div#preloader
+            div.pre-container
+                div.spinner
+                    img(src = "/img/preloader_animation.gif", id = "preloader_animation")
+
+        header.box-header
+            div.box-logo
+                a(href = "/")
+                    img(src = "/img/LogoVertices.png", width="50" alt="Logo")
+        
+        div.container-fluid
+            section.box-intro
+                div.table-cell
+                    h1.box-headline.letters.rotate-2
+                        span.box-words-wrapper
+                            b.is-visible Verts
+                            b &nbsp;Verts
+                    h5 cinematography and animation
+
+        div#portfolio
+            div.container-fluid
+                each project in projects
+                    div.col-md-4.nopadding
+                        a.portfolio_item(href="/project/" + project.projectLocation)
+                            img.img-responsive(src=project.projectImage, alt="image")
+                            div.portfolio_item_hover
+
+        div.container.spacer-top
+            div.col
+                h2.text-uppercase work
+                div.h-10
+                p Our service focuses on high quality advertisment and cinematic projects. Be it 3D or Live-Action.<br>We also offer asset modeling for games or animation, aswell as 3D-Printing figurines and other smaller objects.
+        
+        div.container.spacer-top
+            div.col
+                h2.text-uppercase contact
+                div.h-10
+                p Verts is a filmproduction lead by <b>Max Kollreider</b> and <b>Simon Eberl.</b><br>We are open for paid commissions.<br>Please contact us with the given information below!
+                div.contact-info.spacer-top.spacer-bottom
+                    p +43 699 19254804
+                    p office@verts.xyz
+                    p located in
+                    a(href="https://www.google.com/maps/place/Judendorf-Stra%C3%9Fengel/@47.1112887,15.3140557,14z/data=!3m1!4b1!4m5!3m4!1s0x476e33c1ff3e3beb:0x40097572de66f40!8m2!3d47.111193!4d15.3312648", target="_blank") Gratwein-Straßengel
+
+
+        script(src = "/js/jquery-2.1.1.js")
+        script(src = "/js/bootstrap.min.js")
+        script(src = "/js/menu.js")
+        script(src = "/js/animated-headline.js")
+        script(src = "/js/custom.js")
+
+        footer
+            div.container
+                p.copyright © Verts Portfolio 2020
+                a(href = "/impressum.html")
+                    p Impressum

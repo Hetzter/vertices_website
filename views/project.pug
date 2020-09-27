@@ -1,0 +1,46 @@
+html(lang = "en")
+    head
+        meta(charset = "utf8", http-equiv = "X-UA-Compatible", name="viewport", content="width=device-width, initial-scale=1")
+        title=projectName
+        link(rel = "icon", href = "/img/fav.png", type = "image/x-icon")
+        link(href = "/css/bootstrap.min.css", rel="stylesheet")
+        link(href = "/ionicons/css/ionicons.min.css", rel="stylesheet")
+        link(href = "/css/style.css", rel="stylesheet")
+        script(src = "/js/modernizr.js")
+
+    body
+        div#preloader
+            div.pre-container
+                div.spinner
+                    img(src = "/img/preloader_animation.gif", id = "preloader_animation")
+
+        div.container-fluid
+            header
+                div.box-logo
+                    a(href = "/")
+                        img(src = "/img/LogoVertices.png", width="50" alt="Logo")
+        
+        div.container.main-container(style = "padding: 0px;")
+            div.col-md-12
+                object(data=projectMediaLink, width="960", height="540")
+            div.col-md-12
+                h3.text-uppercase=projectTitle
+                h5=projectSubtitle
+                div.h-30
+            div.col-md-9
+                p=projectText
+
+        script(src = "/js/jquery-2.1.1.js")
+        script(src = "/js/bootstrap.min.js")
+        script(src = "/js/menu.js")
+        script(src = "/js/custom.js")
+
+        footer
+            div.container
+                p.copyright © Verts Portfolio 2020
+                a(href = "impressum.html")
+                    p Impressum
+
+
+
+

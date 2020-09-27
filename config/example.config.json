@@ -1,0 +1,13 @@
+{
+    "database" : {
+        "host": "localhost",
+        "user": "myDbUser",
+        "connectionLimit": 10,
+        "password": "my secure password",
+        "database": "myDatabaseName",
+        "debug": false
+    },
+    "server": {
+        "port": 5000
+    }
+}
