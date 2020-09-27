@@ -3,7 +3,7 @@
         "host": "localhost",
         "user": "myDbUser",
         "connectionLimit": 10,
-        "password": "my secure password",
+        "password": "super_secure_password",
         "database": "myDatabaseName",
         "debug": false
     },
