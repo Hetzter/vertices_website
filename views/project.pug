@@ -24,10 +24,10 @@ html(lang = "en")
             div.col-md-12
                 object(data=projectMediaLink, width="960", height="540")
             div.col-md-12
-                h3.text-uppercase=projectTitle
+                h2.text-uppercase=projectName
                 h5=projectSubtitle
                 div.h-30
-            div.col-md-9
+            div.col-md-9.spacer-bottom
                 p=projectText
 
         script(src = "/js/jquery-2.1.1.js")
@@ -38,7 +38,7 @@ html(lang = "en")
         footer
             div.container
                 p.copyright © Verts Portfolio 2020
-                a(href = "impressum.html")
+                a(href = "/impressum.html")
                     p Impressum
 
 
